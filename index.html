@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <h1>Cal to Voice</h1>
+<form id="calform" name="cal">
+<input id="txt" name="display" style="width: 530px;height:100px; text-align: center;background-color: blue; "><br>
+<input type="button" value="0" onClick="cal.display.value+='0'">
+<input type="button" value="1" onClick="cal.display.value+='1'">
+<input type="button" value="2" onClick="cal.display.value+='2'">
+<input type="button" value="+" style="background-color:red;" onClick="cal.display.value+='+'"></br>
+<input type="button" value="3" onClick="cal.display.value+='3'">
+<input type="button" value="4" onClick="cal.display.value+='4'">
+<input type="button" value="5" onClick="cal.display.value+='5'">
+<input type="button" value="-" style="background-color: blue;" onClick="cal.display.value+='-'"></br>
+<input type="button" value="6" onClick="cal.display.value+='6'">
+<input type="button" value="7" onClick="cal.display.value+='7'">
+<input type="button" value="8" onClick="cal.display.value+='8'">
+<input type="button" value="x" style="background-color:yellow;" onClick="cal.display.value+='*'"></br>
+<input  type="button" value="C" style="background-color:blueviolet;" onClick="cal.display.value=''">
+<input type="button" value="9" onClick="cal.display.value+='9'">
+<input  id="btn" type="button" value="=" style="background-color:aqua;" onClick="cal.display.value=eval(cal.display.value)">
+<input type="button" value="&#247;" style="background-color:palevioletred;" onClick="cal.display.value+='/'">
+
+</form>    
+
+<script>
+    let txt=document.getElementById("txt");
+      let btn=document.getElementById("btn");
+
+      btn.addEventListener("click",function(){
+          let text =txt.value;
+          let utterance= new SpeechSynthesisUtterance(text);
+          speechSynthesis.speak(utterance);
+      });
+  </script>
+</body>
+
+</html>

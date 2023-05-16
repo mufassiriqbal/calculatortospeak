@@ -1,0 +1,29 @@
+input{
+width: 130px;
+height: 90px;
+font-size: 75px;
+border-radius: 50px;
+background-color:#000;
+color:#fff;
+border-style: none;
+margin-top: 10px;
+overflow: hidden;
+
+}
+#calform{
+text-transform: capitalize;
+    margin-left: 150px;
+    margin-top: 20px;
+
+}
+h1{
+background-color: aqua;
+border-radius: 50px;
+    text-align: center;
+    font-size: 50px;
+    margin-right:330px;
+    margin-top: 28px;
+    font-style: italic;
+    text-transform: capitalize;
+    
+}
